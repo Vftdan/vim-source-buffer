@@ -1,0 +1,21 @@
+*sourcebuffer.txt* Plugin for sourcing buffers and ranges
+
+This plugin creates a separate script for each buffer, allowing to use
+local variables. Files are written only once for each user for each buffer
+number.
+
+Scripts are placed into sourcebufferfiles/ directory inside your
+|'runtimepath'|.
+
+						*:SourceBuffer*
+:[range]SourceBuffer	Source [range] lines (default: whole buffer)
+			from current buffer.
+
+					*sourcebuffer#source_range()*
+sourcebuffer#source_range({buf}, {start}, {end})
+		Executes lines from {start} to {end} from buffer {buf}
+		Argument {buf} should be an integer (|expr-number|).
+		Code is executed using |:execute|.
+		See also: |getbufline()|.
+
+vim:tw=70:sw=8:ts=8:noet:ft=help:norl:nowrap:
